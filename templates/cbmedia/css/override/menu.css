@@ -1,0 +1,332 @@
+.container-header .container-nav {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding:0px;   
+  margin:0px auto;
+  position:absolute;  
+  left: auto; right:0px; 
+  top:78px; height:40px; width:auto; max-width:1160px;    
+  z-index:100;  background: none; border:solid #FFFFFF 1px;  
+}
+.container-header .container-nav:after {
+    content:'';
+    position:absolute; z-index:0;
+    left:0; right:0;
+    top:96%;
+    margin:5px auto;
+    width:100%;
+    height:1px;
+    background:#FFFFFF;
+}
+.container-header .mod-menu {
+  color: #FFFFFF;
+  flex: 1 0 100%;
+  list-style: none; margin: 0; padding: 0; 
+}
+.container-header .mod-menu > li {
+  position: relative;   
+}
+.mod-list li {
+  padding:  2px 20px;  /*margin-right:20px; */   background: url(../../images/li.png) no-repeat right center;
+}
+.mod-list li:last-child {
+    background: none;
+}
+.container-header .mod-menu > li > a, .container-header .mod-menu > li > span {
+  color:#FFFFFF;  position: relative;  text-decoration: none; text-transform:uppercase;  line-height:120%; font-weight:600; font-size:11pt;letter-spacing:0.2px;  
+}
+
+.container-header .mod-menu > li::after {
+ /* background: #9E233D;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 5px;
+  left: 50%;
+  margin: auto;
+  opacity: .8;
+  position: absolute;
+  right: 50%;
+  transition: all .2s ease,background-color .2s ease; */  display:none;
+}
+.container-header .mod-menu > li.active::after, .container-header .mod-menu > li:hover::after {
+ /* background: #9E233D;          display:none;
+  left: 0;
+  right: 2px;  */
+}
+
+.container-header .mod-menu > li.active, .container-header .mod-menu > li:hover{
+text-decoration: underline;
+}
+.container-header nav {
+  padding: 0;
+  margin-top: 0.1em;
+}
+.container-header .navbar-toggler {
+ /* border: 1px solid #000000;*/   color: none; font-size:0px;
+  cursor: pointer;   
+}
+.navbar-toggler {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0rem;
+  font-size: 0px;
+  line-height: 1;
+  padding: 0px;
+  transition: box-shadow .15s ease-in-out;  background: url(../../images/nav.png) no-repeat center top; width:40px; height:40px;  border:0px!important;
+}
+/*.container-header .navbar-collapse.show {
+  display: flex;   flex-wrap: wrap;    justify-content: space-between;
+  width:100%;
+}*/
+
+/* submenu */
+.navbar ul li.parent:hover > ul {
+  position:absolute;  z-index:1;
+  display:block;
+  /*background:black;*/
+  background-color:#0B122E;
+  min-width:260px;
+  font-size:10pt;
+  box-shadow:1px 1px 1px #353635;
+  overflow:hidden;
+  padding:0px 0 0 0;
+  -webkit-animation: rollIn 1s;
+  animation: rollIn 1s;  
+}
+.navbar ul li.parent:hover > ul li {
+  padding:0;    margin-right:0px;
+   border-top:solid 1px #353635;    background:none;
+}
+.navbar ul li.parent:hover > ul li a {
+  color:white;
+  text-decoration:none;
+  display:block;
+  padding:5px 20px 8px 20px;
+  width:100%;  font-weight:400; font-size:10pt;text-transform:uppercase;  letter-spacing:0px;
+}
+.navbar ul li.parent:hover > ul li a:hover {
+  background:#FF6600;
+}
+.mod-list ul.mod-menu__sub li.active > a {
+ background:#FF6600;
+}
+  
+
+  
+
+/* responz�vne menu */
+@media (max-width: 1900px)  {
+.container-header .container-nav {
+   
+}
+}
+@media (max-width: 1700px)  {
+.container-header .container-nav {
+ right:20px; 
+}
+.mod-list li {
+  padding:  2px 18px;  
+}
+}
+@media (max-width: 1400px)  {
+.mod-list li {
+  padding:  2px 12px;  /*margin-right:20px; */   
+}
+.container-header .mod-menu > li > a, .container-header .mod-menu > li > span {
+  cfont-weight:400; font-size:10pt;  
+}
+}
+@media (max-width: 1200px)  {
+.mod-list li {
+  padding:  2px 8px;  /*margin-right:20px; */  
+}
+.container-header .mod-menu > li > a, .container-header .mod-menu > li > span {
+  cfont-weight:400; font-size:9pt;  
+}
+}
+
+@media (min-width: 991px) {
+/* zru�enie responz�vnrho menu */
+.navbar-expand-md .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;  
+}
+.container-header .mod-menu { 
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: row; 
+}
+
+.container-header .mod-menu>li+li {
+    margin-left: 0em;  
+}
+.navbar-expand-md .navbar-toggler, .navbar-expand-md .offcanvas-header {
+  display: none;
+}
+}
+
+
+@media (max-width: 990px)  {
+.container-header .mod-menu  > li + li {
+  margin-left: 0px!important;
+}
+.container-header .container-nav {
+  background: none; border:none;
+}
+.container-header .container-nav:after {
+    height:0px;
+    background:#FFFFFF;
+}
+/* posunutie tela str�nky */
+body.move {
+  position:relative;
+  -webkit-animation: moveForwardRight 1s;
+  animation: moveForwardRight 1s;animation-fill-mode: forwards;
+}
+body.moveback {
+  position:relative;
+  -webkit-animation: moveBackRight 1s;
+  animation: moveBackRight 1s;animation-fill-mode: forwards;
+}
+/* responz�vne menu */
+.container-header .container-nav {
+   left:auto; right:20px;
+   top:65px;
+}
+.navbar-expand-md .navbar-toggler, .navbar-expand-md .offcanvas-header {
+  display: block;
+}
+
+.menu-close {
+  position:absolute;
+  top:10px;
+  right:10px;
+  display:block!important;
+  z-index:11;
+  cursor:pointer;
+}
+
+/*.container-header .container-nav {
+  position:static;  
+  left: 0;
+  right:0;
+  top:230px;
+  z-index:0;
+}
+.navbar {
+  position:static;
+  margin-top:0;
+} */
+/*.navbar-toggler {
+  position:absolute;  
+  left: 23px;
+  top:186px;
+  z-index:10;
+}*/
+.collapse {
+right:-200px;
+}
+.navbar-collapse {
+  position:fixed;
+  z-index: 10;
+  top:0px;
+  width:300px;
+  height:100%;
+  background-color:#0B122F;
+  align-items: flex-start;  overflow-x:auto;
+}
+.navbar-toggler-right + .navbar-collapse {
+  -webkit-animation: rightShow 1s;
+  animation: rightShow 1s;animation-fill-mode: forwards;
+}
+.navbar-toggler-right.collapsed + .navbar-collapse, .navbar-collapse.hide {
+  display:block;
+  -webkit-animation: rightHide 1s;
+  animation: rightHide 1s;animation-fill-mode: forwards;
+}
+
+.navbar-collapse .mod-menu > li > a {
+  color:white;
+  font-size:13pt;
+  padding:15px 15px 15px 20px;  
+}
+.mod-list li {
+  padding: 5px 18px;
+}
+.container-header .mod-menu > li::after {
+  display:none;
+}
+.container-header .mod-menu > li.active::after, .container-header .mod-menu > li:hover::after {
+  display:none;
+}
+/* submenu */
+.container-header .mod-menu .parent:hover  ul {
+  position:static;
+  box-shadow:none;
+  display:block;
+}
+.navbar ul li.parent:hover > ul li a {
+  color:white;
+  text-decoration:none;
+  display:block;
+  padding:5px 20px 8px 30px;
+  width:100%;
+}
+
+.container-header .mod-menu {
+   margin: 30px 0px 0px 0px; 
+}
+.container-header .mod-menu li {
+  background:none; 
+}
+.container-header .mod-menu > li:hover {
+text-decoration: none;    
+}
+.container-header .mod-menu > li:hover a {
+text-decoration: underline;    
+}
+.container-header .mod-menu > li.active {
+text-decoration: underline;     
+}
+.navbar ul li.parent:hover > ul {
+  background-color:#18264B;
+
+}
+.navbar ul li.parent:hover > ul li {
+  border:solid 0px #001C68; background:none; text-decoration:none;
+}
+.navbar ul li.parent:hover > ul li a, .navbar ul li.active > ul li a {
+  
+}
+
+.navbar ul li.parent:hover > ul li a:hover {
+  
+}
+.container-header .mod-menu > li.active, .container-header .mod-menu > li:hover{
+text-decoration: none;
+}
+} 
+
+ul.nav.menu-2   {
+  display:block;
+}
+
+ul.mod-list.menu-2  li {
+  padding: 8px 10px;
+  margin-right: 0px;  float:left; width:auto;
+  background: none;  line-height:120%;  background: url(../../images/li2.png) no-repeat right center;
+}
+
+ul.mod-list.menu-2  li a {
+  color:#FFFFFF; font-weight:300; font-size:11pt;
+}
+
+@media (max-width: 500px)  {
+ul.mod-list.menu-2  li {
+  padding: 8px 7px;
+}
+ul.mod-list.menu-2  li a {
+  font-size:9pt;
+}
+}

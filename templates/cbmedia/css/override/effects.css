@@ -1,0 +1,84 @@
+:root {
+ --show-value-start: -300px;
+ --show-value-end: 0;
+ --move-value-start: 0;
+ --move-value-end: 300px; 
+}
+/* z ľava */
+@-webkit-keyframes leftShow {
+  0% { left:  var(--show-value-start); }
+  100% { left: var(--show-value-end); }
+}
+@keyframes leftShow {
+  0% { left:  var(--show-value-start); }
+  100% { left: var(--show-value-end); }
+}
+
+@-webkit-keyframes leftHide {
+  0% { left: var(--show-value-end); }
+  100% { left:  var(--show-value-start); }
+}
+@keyframes leftHide {
+  0% { left: var(--show-value-end); }
+  100% { left:  var(--show-value-start); }
+}
+
+@-webkit-keyframes moveForward {
+  0% { left: var(--move-value-start); }
+  100% { left: var(--move-value-end); }
+}
+@keyframes moveForward {
+  0% { left: var(--move-value-start); }
+  100% { left: var(--move-value-end); }
+}
+
+@-webkit-keyframes moveBack {
+  0% { left: var(--move-value-end); }
+  100% { left: var(--move-value-start); }
+}
+@keyframes moveBack {
+  0% { left: var(--move-value-end); }
+  100% { left: var(--move-value-start); }
+}
+
+/* z prava */
+@-webkit-keyframes rightShow {
+  0% { right:  var(--show-value-start); }
+  100% { right: var(--show-value-end); }
+}
+@keyframes rightShow {
+  0% { right:  var(--show-value-start); }
+  100% { right: var(--show-value-end); }
+}
+
+@-webkit-keyframes rightHide {
+  0% { right: var(--show-value-end); }
+  100% { right:  var(--show-value-start); }
+}
+@keyframes rightHide {
+  0% { right: var(--show-value-end); }
+  100% { right:  var(--show-value-start); }
+}
+
+@-webkit-keyframes moveForwardRight {
+  0% { right: var(--move-value-start); }
+  100% { right: var(--move-value-end); }
+}
+@keyframes moveForwardRight {
+  0% { right: var(--move-value-start); }
+  100% { right: var(--move-value-end); }
+}
+
+@-webkit-keyframes moveBackRight {
+  0% { right: var(--move-value-end); }
+  100% { right: var(--move-value-start); }
+}
+@keyframes moveBackRight {
+  0% { right: var(--move-value-end); }
+  100% { right: var(--move-value-start); }
+}
+
+header a img:hover {
+ transition: all .45s ease-out;
+ transform:scale(1.05);
+}
